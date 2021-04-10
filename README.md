@@ -22,7 +22,7 @@ type Customer struct {
 }
 ```
 
-For each scenario is run under 3 levels of complexity:
+For each scenario is run under 3 levels of complexity in a computer with cpu Intel(R) Core(TM) i5–6267U CPU @ 2.90GHz with Golang 1.16.2:
 
 - **Level 1:** it is the customer object with 1 address.
 - **Level 2:** it is the customer object with 10 addresses, 10 friends and each friend contains 10 addresses.
@@ -42,7 +42,7 @@ BenchmarkMarshalGogoProtoL1-4             1244660             944.4 ns/op       
 
 ```
 
-![unmarshak_level1](../xbuffer/resources/img/marshal_level1.png)
+![unmarshak_level1](./resources/img/marshal_level1.png)
 
 **Level 2**
 ```
@@ -52,7 +52,7 @@ BenchmarkAllocationFBSL2-4                 10000            116492 ns/op        
 BenchmarkMarshalGogoProtoL2-4              17931             67348 ns/op           31112 B/op        433 allocs/op
 ```
 
-![unmarshak_level1](../xbuffer/resources/img/marshal_level2.png)
+![unmarshak_level1](./resources/img/marshal_level2.png)
 
 
 **Level 3**
@@ -64,7 +64,7 @@ BenchmarkAllocationFBSL3-4                    78          13158922 ns/op        
 BenchmarkMarshalGogoProtoL3-4                 104         11383685 ns/op         4968503 B/op      62899 allocs/op
 ```
 
-![unmarshak_level1](../xbuffer/resources/img/marshal_level3.png)
+![unmarshak_level1](./resources/img/marshal_level3.png)
 
 ## Unmarshalling 
 
@@ -77,7 +77,7 @@ BenchmarkUnmarshalFBSL1-4                 510885903                2.365 ns/op  
 BenchmarkUnmarshalGogoProtoL1-4           1863813               628.5 ns/op           528 B/op         11 allocs/op
 ```
 
-![unmarshak_level1](../xbuffer/resources/img/unmarshal_level1.png)
+![unmarshak_level1](./resources/img/unmarshal_level1.png)
 
 **Level 2**
 
@@ -88,7 +88,7 @@ BenchmarkUnmarshalFBSL2-4                  444298354         2.490 ns/op        
 BenchmarkUnmarshalGogoProtoL2-4            34784             34081 ns/op           22206 B/op        465 allocs/op
 ```
 
-![unmarshak_level1](../xbuffer/resources/img/unmarshal_level2.png)
+![unmarshak_level1](./resources/img/unmarshal_level2.png)
 
 **Level 3**
 
@@ -99,4 +99,4 @@ BenchmarkUnmarshalFBSL3-4                     527564692   2.248 ns/op           
 BenchmarkUnmarshalGogoProtoL3-4               193         5784670 ns/op           3625775 B/op    64031 allocs/op
 ```
 
-![unmarshak_level1](../xbuffer/resources/img/unmarshal_level3.png)
+![unmarshak_level1](./resources/img/unmarshal_level3.png)
