@@ -1,0 +1,38 @@
+namespace model;
+
+table Customer {
+  first_name:string;
+  last_name:string;
+  age:uint;
+  balance:double;
+  debt:double;
+  preferences:Preferences;
+  friends:[Customer];
+  addresses:[AddressKV];
+}
+
+table Preferences {
+  dark_mode:bool;
+  language:string;
+  notification:Notification; 
+}
+
+table Notification {
+  sms:bool;
+  push:bool;
+  email:bool;
+}
+
+table AddressKV {
+  alias:string (key);
+  location:Location;
+}
+
+table Location {
+  address:string;
+  latitude:double;
+  longitude:double;
+  is_ative:bool;
+}
+
+root_type Customer;

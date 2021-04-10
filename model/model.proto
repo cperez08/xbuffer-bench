@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option go_package = "github.com/cperez08/xbuffer-test/model";
+
+message Customer {
+  string first_name = 1;
+  string last_name = 2;
+  uint32 age = 3;
+  double balance = 4;
+  double debt = 5;
+  repeated Customer friends = 6;
+  map<string, Location> addresses = 7;
+  Preferences preferences = 8;
+}
+
+message Preferences {
+  bool dark_mode = 1;
+  string language = 2;
+  Notification notification = 3;
+}
+
+message Notification {
+  bool sms = 1;
+  bool push = 2;
+  bool email = 3;
+}
+
+message Location {
+  string address = 1;
+  double Latitude = 2;
+  double Longitude = 3;
+  bool is_active = 4;
+}
